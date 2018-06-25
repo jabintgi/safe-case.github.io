@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SAFE CASE</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/siginbtn.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+<style>
+    .scale0{transition: all 0.5s;transform: scale(0)}
+    .newwrap-login100 {
+    display: none;
+    z-index: 2;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+    form table td{padding: 5px;}
+    .row{
+        transition: all 0.5s ease-in-out;
+        background: white;
+        width: 70%;
+        border-radius: 10px;
+        z-index: -1;
+        position: absolute;
+        
+    }
+    table{width: 100%;border-radius: 10px;}
+    .table-row th{background: aqua;}
+    .table-row th,.table-row td{
+        transition: all 0.5s;
+        text-align: center;
+        font-size: 15px;
+        padding: 3px 5px;
+    }
+    .delete-icon{color:#de5757;}.delete-icon:hover{color:red;font-weight:600;}
+    .edit-icon{color:#575a5a;}.edit-icon:hover{color:black;font-weight:600;}
+    .link a{color: #007bff;font-weight: 600;}
+    .link a:hover{color: red;font-weight: 600;}
+   
+    
+    @media(max-width:629px)
+    {
+        .row{
+            transition: all 0.5s;
+            width: 98%;
+            position: static;
+        }
+        .table-row th,.table-row td{
+        transition: all 0.5s    ;
+        font-size: 13px;
+        padding: 3px 0;
+    }
+        form table td{display: block;}
+        .newwrap-login100 {
+    width: 100%;
+    margin: 10px;
+    border-radius: 0;
+    padding: 30px 10px;
+    border-radius: 10px;
+}
+        table{width: 100%;}
+        .container-login100{padding: 0;}
+        .input100 { width: 100%;padding: 10px 20px 10px 23px;height: 50px;}
+        .p-b-37{padding-bottom: 20px;}
+        .login100-form-title {font-size: 20px;}
+        .m-b-20{margin-bottom: 0;}
+        .login100-form-btn {
+    padding: 0 20px;
+    min-width: 60px;
+    height: 30px;
+    font-size: 12px;
+}
+        .newlogin100-form-btn {
+            padding: 0 20px;
+    min-width: 200px;
+    height: 40px;
+    font-size: 12px;
+}
+        .newwrap-login100{margin-top: 50px;}
+
+    }
+    </style>
+</head>
+<body>
+<div class="mycontainer" style="width: 100%;overflow-x: hidden">
+
+	<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+	
+	<div style="position: absolute;top: 15px;left: 15px;">
+					<button class="login100-form-btn" id="addbtn"></button>
+				</div>
+	<!--=================================SIGN IN FORM=======================================================-->
+		<div class="newwrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+			<form class="login100-form validate-form" method="post">
+				<span class="login100-form-title p-b-37">NEW SAFE DATA</span>
+<table>
+    <tr><td><div class="wrap-input100 validate-input m-b-20" data-validate="Enter Shortcut Name">
+					<input class="input100" type="text" name="name" placeholder="Shortcut Name" id="name">
+					<span class="focus-input100"></span>
+				</div></td><td><div class="wrap-input100 validate-input m-b-20" data-validate="URL Must needed">
+					<input class="input100" type="text" name="url" placeholder="URL" id="url">
+					<span class="focus-input100"></span>
+				</div></td></tr>
+    <tr><td><div class="wrap-input100 validate-input m-b-20" data-validate="Enter Username">
+					<input class="input100" type="text" name="username" placeholder="Username" id="uname">
+					<span class="focus-input100"></span>
+				</div></td><td><div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
+					<input class="input100" type="password" name="pwd" placeholder="password" id="pwd">
+					<span class="focus-input100"></span>
+				</div></td></tr>
+</table>
+				<div class="container-login100-form-btn">
+					<button class="login100-form-btn newlogin100-form-btn" type="submit" id="savebtn">SAVE</button>
+				</div>
+			</form>	
+		</div>
+		<!--=================================DATA TABLE=======================================================-->
+<div class="row table-row">
+			<table id="datatable">
+            <thead>
+			    <tr><th>Name</th><th>Username / Email</th><th>Password</th>
+			    <th colspan="2">Action</th></tr>
+                </thead>
+			    <tbody>
+			    <tr>
+			    <td class="link">
+			    <a href="https://www.google.com/gmail/about/#">Gmail</a>
+			    </td>
+			    <td>myemail@gmail.com</td>
+			    <td>654984</td>
+			    <td style="padding:0">
+                <button value="d" id="btn">
+                    <i class="material-icons edit-icon" data-toggle="tooltip" data-placement="bottom" title="Edit">edit</i>
+                </button>
+                </td><td>
+			     <button value="d" id="btn">
+			        <i class="material-icons delete-icon" data-toggle="tooltip" data-placement="top" title="Delete">delete</i>
+			     </button>
+			    </td>
+			    </tr>
+               
+               <tr>
+			    <td class="link">
+			    <a href="https://www.facebook.com/">Facebook</a>
+			    </td>
+			    <td>facebook123</td>
+			    <td>654984</td>
+			    <td style="padding:0">
+                <button value="d" id="btn">
+                    <i class="material-icons edit-icon" data-toggle="tooltip" data-placement="bottom" title="Edit">edit</i>
+                </button>
+                </td><td>
+			     <button value="d" id="btn">
+			        <i class="material-icons delete-icon" data-toggle="tooltip" data-placement="top" title="Delete">delete</i>
+			     </button>
+			    </td>
+			    </tr>
+                </tbody>
+			</table>
+</div>	
+	</div>
+    </div>
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+<!--===============================================================================================-->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script src="js/firebase-access.js"></script>
+<!--===============================SIGN UP=========================================================-->
+    <script>
+    $(document).ready(function(){
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+        var click=1;
+        var size=0;
+        $("#addbtn").html("Add&nbsp&nbsp+");
+       $("#addbtn").click(function(){
+           if(click==1)
+               {
+                   $(this).html('close');
+                   click=0;
+               }
+           else{
+               $(this).html("Add&nbsp&nbsp+");
+               click=1;
+           }
+           
+           $(".newwrap-login100").slideToggle();
+           $(".row").toggleClass("scale0");
+       });
+       });
+    </script>
+</body>
+</html>
